@@ -1,0 +1,39 @@
+[project]
+name = "shorter"
+version = "2.0.0"
+description = "Version 2 of a Url shortener application"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]==0.117.1",
+    "pydantic-settings==2.10.1",
+    "pytest==8.4.2",
+    "pytest-asyncio==1.2.0",
+    "pytest-tornasync==0.6.0.post2",
+    "pytest-trio==0.8.0",
+    "pytest-twisted==1.14.3",
+    "twisted==25.5.0",
+    "pyjwt==2.10.1",
+    "argon2-cffi==25.1.0",
+    "mongomock==4.3.0",
+    "pymongo==4.15.1",
+    "segno==1.6.6",
+    "mongomock-motor==0.0.36",
+    "time-machine==2.19.0",
+    "freezegun==1.5.5",
+    "testcontainers[mongodb]==4.13.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+#addopts = [
+#    "--import-mode=importlib",
+#]
+minversion = "6.0"
+addopts = "-ra -q -s -v"
+testpaths = [
+    "testing",
+]
+python_files = "test_*.py testing_*.py *_test.py *_testing.py tests.py"
+python_classes = "Test* *Test Testing* *Testing"
+python_functions = "test_* testing_* *_test *_testing"
+norecursedirs = ".git env .env venv .venv .toml .lock .http"
