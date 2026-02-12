@@ -28,12 +28,12 @@
     &quot;assignee&quot;: &quot;ttt0mi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ttt0mi/url-shortener-B.git&quot;,
-    &quot;accountId&quot;: &quot;6d5a41f8-2bfc-4da8-aa25-ea831c7c9f79&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ttt0mi/SHORTer_url-shortener-backend.git",
+    "accountId": "6d5a41f8-2bfc-4da8-aa25-ea831c7c9f79"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -200,8 +200,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.26830.99" />
-        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -240,6 +240,7 @@
       <workItem from="1762324187769" duration="162000" />
       <workItem from="1762324437648" duration="1290000" />
       <workItem from="1762332613899" duration="55000" />
+      <workItem from="1762792049259" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary interfaces for handler and repository. refactored and updated all tests to match new api route while making proper use of pytests' fixtures.">
       <option name="closed" value="true" />
