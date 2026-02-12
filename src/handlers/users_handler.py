@@ -1,5 +1,5 @@
 from src.database.users_repository import UsersRepository
-from src.exceptions.user_errors import UserNotFoundError, UserAlreadyExistsError, InvalidCredentialsError
+from src.exceptions.user_errors import UserNotFoundError, UserAlreadyExistsError, InvalidPasswordError
 from src.schemas.user_schemas import CreateUser
 from src.utilities.security import hash_password, verify_password
 
@@ -22,7 +22,7 @@ class UsersHandler:
 		if not verify_password(
 				request_password=password, hashed_password=found_user_data["password"]
 		):
-			raise InvalidCredentialsError("Incorrect password")
+			raise InvalidPasswordError("Incorrect password")
 		return found_user_data
 
 	async def retrieve_user_by(self, user_id: str):

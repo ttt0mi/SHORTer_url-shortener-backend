@@ -54,10 +54,10 @@ def test_login_user(client):
 @pytest.mark.parametrize(
 		argnames=("username", "password", "expected_status", "reason"),
 		argvalues=[
-				("nonexistent@example.com", "TomPass123!", 404, "invalid email"),
+				("nonexistent@example.com", "TomPass123!", 404, "unregistered email"),
 				("tcoral@example.com", "WrongPass1@", 401, "invalid password"),
 		],
-		ids=["invalid-email", "invalid-password"]
+		ids=["unregistered-email", "invalid-password"]
 )
 def test_login_invalid_cases(client, username, password, expected_status, reason):
 	payload = {
