@@ -4,7 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="more verbose git ignore" />
+    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="more verbose git ignore">
+      <change afterPath="$PROJECT_DIR$/.idea/SHORTer_url-shortener-backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/SHORTer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/pyproject.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/configuration/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/configuration/app_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/configuration/database_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/configuration/dependencies.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/configuration/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/database/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/database/url_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/exceptions/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/exceptions/url_exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/handlers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/handlers/url_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/models/url_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/routes/url_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/utilities/code_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/testing/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/testing/test_shortener_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/testing/testing_httpx.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/uv.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/SHORTerV2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/pyproject.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/app_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/app_factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/database_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/dependencies.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/configuration/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/database/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/database/token_blacklist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/database/url_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/database/users_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/exceptions/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/exceptions/url_errors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/exceptions/user_errors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/handlers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/handlers/token_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/handlers/urls_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/handlers/users_handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/routes/authentication_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/routes/urls_router.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/schemas/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/schemas/url_schemas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/schemas/user_schemas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/utilities/code_generation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/utilities/security.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/src/utilities/validators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/test_main.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/testing/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/testing/test_auth_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/testing/test_url_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/uv.lock" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,12 +104,12 @@
     &quot;assignee&quot;: &quot;ttt0mi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ttt0mi/url-shortener-B.git&quot;,
-    &quot;accountId&quot;: &quot;6d5a41f8-2bfc-4da8-aa25-ea831c7c9f79&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ttt0mi/SHORTer_url-shortener-backend.git",
+    "accountId": "6d5a41f8-2bfc-4da8-aa25-ea831c7c9f79"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -42,38 +118,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_example.test_get_short_url_returns_redirect.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_example.test_post_original_url_to_get_shortened.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_example.test_post_secret_key_to_disable_short_url.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_example.test_post_secret_key_to_enable_short_url.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_example.test_post_secret_key_to_get_info.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_example.test_test_post_secret_key_to_get_info.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_shortener_routes.test_post_original_url_to_get_shortened.executor&quot;: &quot;Debug&quot;,
-    &quot;Python tests.Python tests for testing_shortener_routes.test_post_original_url_to_get_shortened.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for testing_shortener_routes.test_post_secret_key_to_get_info.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_example.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_shortener_routes.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in testing_shortener_routes.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testing_http.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tomiomolokun/PycharmProjects/SHORTer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for test_example.test_get_short_url_returns_redirect.executor": "Run",
+    "Python tests.Python tests for test_example.test_post_original_url_to_get_shortened.executor": "Run",
+    "Python tests.Python tests for test_example.test_post_secret_key_to_disable_short_url.executor": "Run",
+    "Python tests.Python tests for test_example.test_post_secret_key_to_enable_short_url.executor": "Run",
+    "Python tests.Python tests for test_example.test_post_secret_key_to_get_info.executor": "Run",
+    "Python tests.Python tests for test_example.test_test_post_secret_key_to_get_info.executor": "Run",
+    "Python tests.Python tests for test_shortener_routes.test_post_original_url_to_get_shortened.executor": "Debug",
+    "Python tests.Python tests for testing_shortener_routes.test_post_original_url_to_get_shortened.executor": "Run",
+    "Python tests.Python tests for testing_shortener_routes.test_post_secret_key_to_get_info.executor": "Run",
+    "Python tests.Python tests in test_example.py.executor": "Run",
+    "Python tests.Python tests in test_shortener_routes.py.executor": "Run",
+    "Python tests.Python tests in testing_shortener_routes.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.testing_http.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "test",
+    "last_opened_file_path": "/Users/tomiomolokun/Documents/GitHub/SHORTer_url-shortener-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -200,8 +277,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.26830.99" />
-        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
       </set>
     </attachedChunks>
   </component>
@@ -240,6 +317,7 @@
       <workItem from="1762324187769" duration="162000" />
       <workItem from="1762324437648" duration="1290000" />
       <workItem from="1762332613899" duration="55000" />
+      <workItem from="1770897048767" duration="3514000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary interfaces for handler and repository. refactored and updated all tests to match new api route while making proper use of pytests' fixtures.">
       <option name="closed" value="true" />
