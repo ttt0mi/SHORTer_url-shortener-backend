@@ -11,7 +11,7 @@ async def connect():
 	global mongo_client, mongo_database
 	try:
 		mongo_client = AsyncMongoClient(get_settings().DATABASE_URI)
-		mongo_database = mongo_client.get_database("url_shortener_db_v2")
+		mongo_database = mongo_client.get_default_database()
 		if mongo_database is None:
 			print("no connection could be established")
 		else:

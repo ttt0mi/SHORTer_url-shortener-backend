@@ -1,0 +1,49 @@
+services:
+  mongodb:
+    image: mongo:8.2
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
+    ports:
+      - "${MONGO_PORT}:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      # MongoDB connection string - note we use the service name "mongodb" as hostname
+      DATABASE_URI: ${DATABASE_URI}
+      TOKEN_KEY: ${TOKEN_KEY}
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - app-network
+    # Optional: mount your code for development (hot reload)
+    volumes:
+      - ./src:/app/src
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge

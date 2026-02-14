@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="extra .idea stuff">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/user_errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/user_errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handlers/users_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/users_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/test_auth_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/test_auth_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401.">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev.Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prod.Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/database_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/database_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +254,7 @@
       <workItem from="1762332613899" duration="55000" />
       <workItem from="1770897048767" duration="3514000" />
       <workItem from="1770906007610" duration="101000" />
-      <workItem from="1770906112907" duration="6443000" />
+      <workItem from="1770906112907" duration="32329000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary interfaces for handler and repository. refactored and updated all tests to match new api route while making proper use of pytests' fixtures.">
       <option name="closed" value="true" />
@@ -288,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770908134163</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401.">
+      <option name="closed" value="true" />
+      <created>1770914408703</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770914408703</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +307,8 @@
     <MESSAGE value="git ignore for some reason was not commited and pushed during the last push operation, it has been pushed now alongside an example .env for anyone interested in cloning this repository" />
     <MESSAGE value="more verbose git ignore" />
     <MESSAGE value="extra .idea stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra .idea stuff" />
+    <MESSAGE value="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401." />
+    <option name="LAST_COMMIT_MESSAGE" value="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SHORTer$.coverage" NAME=" Coverage Results" MODIFIED="1760227809092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testing" />

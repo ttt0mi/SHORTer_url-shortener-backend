@@ -12,7 +12,6 @@ class Settings(BaseSettings):
 	)
 
 	DATABASE_URI: str
-	DATABASE_NAME: str
 	TOKEN_KEY: str
 
 
