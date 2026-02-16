@@ -9,7 +9,7 @@ from src.database.token_blacklist import TokenBlacklistProtocol
 from src.configuration.settings import get_settings
 from src.exceptions.user_errors import UnauthorisedTokenAccessError, MissingTokenError, TokenBlacklistedError
 
-SECRET_KEY = get_settings().TOKEN_KEY
+SECRET_KEY = get_settings().token_key
 
 class TokenHandler:
 	def __init__(self, token_blacklist: TokenBlacklistProtocol):

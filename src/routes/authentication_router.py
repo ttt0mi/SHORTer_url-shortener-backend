@@ -11,7 +11,7 @@ from src.handlers.users_handler import UsersHandler
 from src.handlers.token_handler import TokenHandler
 from src.schemas.user_schemas import CreateUser, TokenResponse, CurrentUser
 
-router = APIRouter(prefix="/api/auth", tags=["Authentication/Authorisation"])
+router = APIRouter(prefix="/api/auth", tags=["Authentication", "Authorisation"])
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/auth/login/", refreshUrl="api/auth/refresh/")
 
 

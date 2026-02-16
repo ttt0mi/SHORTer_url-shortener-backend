@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401.">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
+    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="application dockerization process&#10;created dev.DockerFile, docker-compose.dev.yml and .dockerignore">
+      <change afterPath="$PROJECT_DIR$/docker-compose.prod.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/prod.Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/service_health_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/app_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/app_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/app_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/app_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/configuration/database_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/database_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/configuration/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handlers/token_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/token_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/authentication_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authentication_router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +28,8 @@
       <list>
         <option value="FastAPI main" />
         <option value="FastAPI test_main" />
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -70,11 +75,13 @@
     "Python tests.pytest in test_auth_routes.py.executor": "Run",
     "Python tests.pytest in test_url_routes.py.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.settings.executor": "Run",
     "Python.testing_http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "/Users/tomiomolokun/Library/Application Support/JetBrains/PyCharm2025.2/plugins/Shell Script/shellcheck",
     "git-widget-placeholder": "test",
     "last_opened_file_path": "/Users/tomiomolokun/Documents/GitHub/SHORTer_url-shortener-backend",
     "node.js.detected.package.eslint": "true",
@@ -254,7 +261,10 @@
       <workItem from="1762332613899" duration="55000" />
       <workItem from="1770897048767" duration="3514000" />
       <workItem from="1770906007610" duration="101000" />
-      <workItem from="1770906112907" duration="32329000" />
+      <workItem from="1770906112907" duration="32774000" />
+      <workItem from="1771071084103" duration="27000" />
+      <workItem from="1771152168800" duration="639000" />
+      <workItem from="1771177684958" duration="31526000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary interfaces for handler and repository. refactored and updated all tests to match new api route while making proper use of pytests' fixtures.">
       <option name="closed" value="true" />
@@ -296,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770914408703</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="application dockerization process&#10;created dev.DockerFile, docker-compose.dev.yml and .dockerignore&#10;used docker networking to connect backend image to new mongodb image and volume">
+      <option name="closed" value="true" />
+      <created>1771071048561</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1771071048561</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,10 +326,12 @@
     <MESSAGE value="more verbose git ignore" />
     <MESSAGE value="extra .idea stuff" />
     <MESSAGE value="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401." />
-    <option name="LAST_COMMIT_MESSAGE" value="restructured pyproject.toml by making test dependencies optional.changed http response status code for invalid password exception from 403 to 401." />
+    <MESSAGE value="application dockerization process&#10;created dev.DockerFile, docker-compose.dev.yml and .dockerignore&#10;used docker networking to connect backend image to new mongodb image and volume" />
+    <option name="LAST_COMMIT_MESSAGE" value="application dockerization process&#10;created dev.DockerFile, docker-compose.dev.yml and .dockerignore&#10;used docker networking to connect backend image to new mongodb image and volume" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SHORTer$.coverage" NAME=" Coverage Results" MODIFIED="1760227809092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testing" />
+    <SUITE FILE_PATH="coverage/SHORTer_url_shortener_backend$settings.coverage" NAME="settings Coverage Results" MODIFIED="1771244651687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/configuration" />
     <SUITE FILE_PATH="coverage/SHORTer$testing_http.coverage" NAME="testing_http Coverage Results" MODIFIED="1758001171362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SHORTer$main.coverage" NAME="main Coverage Results" MODIFIED="1758903677388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SHORTer_url_shortener_backend$pytest_in_test_url_routes_py.coverage" NAME="pytest in test_url_routes.py Coverage Results" MODIFIED="1770909952917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -10,7 +10,11 @@ mongo_database: AsyncDatabase | None = None
 async def connect():
 	global mongo_client, mongo_database
 	try:
-		mongo_client = AsyncMongoClient(get_settings().DATABASE_URI)
+		mongo_client = AsyncMongoClient(
+			get_settings().database_uri,
+			maxPoolSize=10,
+			maxIdletimeMS=45000,
+		)
 		mongo_database = mongo_client.get_default_database()
 		if mongo_database is None:
 			print("no connection could be established")
@@ -36,5 +40,6 @@ async def disconnect():
 
 def get_database() -> AsyncDatabase:
 	if mongo_database is None:
+		#this exception type will change
 		raise RuntimeError("database server not configured.")
 	return mongo_database
