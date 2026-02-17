@@ -6,7 +6,7 @@ from starlette.status import (
 )
 
 from src.handlers.urls_handler import UrlsHandler
-from src.routes.authentication_router import retrieve_current_user
+from src.routes.auth_router import retrieve_current_user
 from src.schemas.user_schemas import CurrentUser
 from src.configuration.dependencies import get_urls_handler
 from src.schemas.url_schemas import *

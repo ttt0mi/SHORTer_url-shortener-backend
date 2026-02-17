@@ -5,7 +5,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from src.configuration.settings import get_settings
 from src.routes import urls_router, service_health_router
-from src.routes import authentication_router
+from src.routes import auth_router
 from src.configuration.database_config import connect, disconnect
 
 
@@ -41,6 +41,6 @@ async def app_lifespan(app: FastAPI):
 	await disconnect()
 
 def register_routes(app: FastAPI):
-	app.include_router(authentication_router.router)
+	app.include_router(auth_router.router)
 	app.include_router(urls_router.router)
 	app.include_router(service_health_router.router)
