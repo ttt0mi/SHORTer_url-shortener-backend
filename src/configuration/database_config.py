@@ -15,7 +15,7 @@ async def connect():
 			maxPoolSize=10,
 			maxIdletimeMS=45000,
 		)
-		mongo_database = mongo_client.get_default_database()
+		mongo_database = mongo_client.get_database("SHORTER_db")
 		if mongo_database is None:
 			print("no connection could be established")
 		else:

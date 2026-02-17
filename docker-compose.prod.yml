@@ -1,0 +1,13 @@
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: prod.Dockerfile
+    env_file:
+      - .env.prod
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      TOKEN_KEY: ${TOKEN_KEY}
+      PORT: 8000
+    ports:
+      - "8000:8000"
