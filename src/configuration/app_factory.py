@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 
 from src.configuration.app_config import app_lifespan, configure_cors, register_routes, configure_trusted_hosts
+from src.configuration.settings import get_settings
 
 
-def create_app(title: str, summary: str, *, lifespan: bool, debug: bool, cors: bool, trusted_hosts: bool) -> FastAPI:
+def create_app(title: str, summary: str, *, lifespan: bool, cors: bool, trusted_hosts: bool) -> FastAPI:
 	app = FastAPI(
 		title=title, summary=summary,
 		lifespan=app_lifespan if lifespan else None,
-		debug=debug
+		debug=get_settings().environment == "development"
 	)
 	register_routes(app)
 

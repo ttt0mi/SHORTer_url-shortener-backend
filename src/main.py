@@ -4,7 +4,6 @@ app = create_app(
 	title="Url Shortener",
 	summary="application for shortening URLs",
 	lifespan=True,
-	debug=False,
 	cors=True,
 	trusted_hosts=True
 )

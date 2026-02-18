@@ -6,6 +6,7 @@ from starlette.responses import JSONResponse
 from starlette.status import HTTP_200_OK, HTTP_201_CREATED
 
 from src.configuration.dependencies import get_users_handler, get_token_handler
+from src.configuration.settings import get_settings
 from src.exceptions.user_errors import MissingTokenError
 from src.handlers.users_handler import UsersHandler
 from src.handlers.token_handler import TokenHandler
@@ -38,9 +39,10 @@ async def login(
 	response.set_cookie(
 			key="refresh_token",
 			value=refresh_token,
+			max_age=86400 if get_settings().environment == "production" else None,
 			httponly=True,
 			samesite="lax",
-			secure=False
+			secure=get_settings().environment == "production"
 	)
 	return TokenResponse(access_token=access_token, token_type="bearer")
 
@@ -98,9 +100,9 @@ async def logout(
 	response = JSONResponse({"message": "Successfully logged out"}, status_code=200)
 	response.delete_cookie(
 			"refresh_token",
-			httponly=False,
+			httponly=True,
 			samesite="lax",
-			secure=False
+			secure=get_settings().environment == "production"
 	)
 	return response
 

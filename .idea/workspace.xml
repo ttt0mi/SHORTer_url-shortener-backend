@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="manually deleted and re-installed uv.lock due to issues with project dependency visibility">
-      <change afterPath="$PROJECT_DIR$/docker-compose.prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prod.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/service_health_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configuration/app_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/app_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configuration/database_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/database_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configuration/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authentication_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth_router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/urls_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/urls_router.py" afterDir="false" />
+    <list default="true" id="5dad6274-2a78-4d01-8dc5-2e5bd641a1f6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configuration/app_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/configuration/app_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth_router.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth_router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +95,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="FastAPI.SHORTer">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SHORTer" />
       <option name="ENV_FILES" value="" />
@@ -264,7 +257,8 @@
       <workItem from="1771071084103" duration="27000" />
       <workItem from="1771152168800" duration="639000" />
       <workItem from="1771177684958" duration="39266000" />
-      <workItem from="1771327997937" duration="12778000" />
+      <workItem from="1771327997937" duration="17198000" />
+      <workItem from="1771353038851" duration="5045000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary interfaces for handler and repository. refactored and updated all tests to match new api route while making proper use of pytests' fixtures.">
       <option name="closed" value="true" />
@@ -330,7 +324,39 @@
       <option name="project" value="LOCAL" />
       <updated>1771347710046</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="renamed file and changed tags in auth router to netter convey use">
+      <option name="closed" value="true" />
+      <created>1771348037504</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1771348037504</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added extra variables to .env.example for development use. &#10;added ability to switch between env files based on current environment (development or production)">
+      <option name="closed" value="true" />
+      <created>1771348167777</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1771348167777</updated>
+    </task>
+    <task id="LOCAL-00011" summary="made requires-python var in pyproject.toml more flexible due to non-root users not being allowed to run application due to denied permissions to access .venv binaries">
+      <option name="closed" value="true" />
+      <created>1771348485115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1771348485115</updated>
+    </task>
+    <task id="LOCAL-00012" summary="setup for application deployment via docker environment on render.&#10;added /health endpoint for render's health checks">
+      <option name="closed" value="true" />
+      <created>1771348523711</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1771348523711</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +371,11 @@
     <MESSAGE value="application dockerization process&#10;created dev.DockerFile, docker-compose.dev.yml and .dockerignore&#10;used docker networking to connect backend image to new mongodb image and volume" />
     <MESSAGE value="switched all settings variables from screaming snake case to snake case. added allowed hosts env for TrustedHostMiddleware and allowed origins env for CORSMiddleware.&#10;added extra parameters for better &quot;create_app&quot; configurations and extra parameters for better database management" />
     <MESSAGE value="manually deleted and re-installed uv.lock due to issues with project dependency visibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="manually deleted and re-installed uv.lock due to issues with project dependency visibility" />
+    <MESSAGE value="renamed file and changed tags in auth router to netter convey use" />
+    <MESSAGE value="added extra variables to .env.example for development use. &#10;added ability to switch between env files based on current environment (development or production)" />
+    <MESSAGE value="made requires-python var in pyproject.toml more flexible due to non-root users not being allowed to run application due to denied permissions to access .venv binaries" />
+    <MESSAGE value="setup for application deployment via docker environment on render.&#10;added /health endpoint for render's health checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup for application deployment via docker environment on render.&#10;added /health endpoint for render's health checks" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SHORTer$.coverage" NAME=" Coverage Results" MODIFIED="1760227809092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testing" />
