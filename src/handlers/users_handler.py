@@ -18,11 +18,11 @@ class UsersHandler:
 	async def authenticate_from(self, email: str, password: str):
 		found_user_data = await self.users.find_user_by_email(email)
 		if found_user_data is None:
-			raise UserNotFoundError("Incorrect email, user not found")
+			raise UserNotFoundError("Invalid credentials")
 		if not verify_password(
 				request_password=password, hashed_password=found_user_data["password"]
 		):
-			raise InvalidPasswordError("Incorrect password")
+			raise InvalidPasswordError("Invalid credentials")
 		return found_user_data
 
 	async def retrieve_user_by(self, user_id: str):
