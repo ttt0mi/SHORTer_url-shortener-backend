@@ -34,7 +34,21 @@ async def health_check():
 	#check 1: api can be reached
 	health_status["checks"]["api"] = "ok"
 	
-	#check 2. database connectivity
+	#check 2: existence of environment variables
+	required_env_vars = {"DATABASE_URI", "TOKEN_KEY", "ALLOWED_HOSTS", "ALLOWED_ORIGINS"}
+	missing_env_vars = {var for var in required_env_vars if not os.getenv(var)}
+	
+	if missing_env_vars:
+		health_status["status"] = "unhealthy"
+		health_status["checks"]["environment"] = f"missing: {', '.join(sorted(missing_env_vars))}"
+		return JSONResponse(
+			status_code=HTTP_503_SERVICE_UNAVAILABLE,
+			content=health_status
+		)
+	
+	health_status["checks"]["environment"] = "ok"
+	
+	#check 3. database connectivity
 	try:
 		client = get_async_mongo_client()
 		await client.admin.command("ping", maxTimeMS=5000)
@@ -45,19 +59,5 @@ async def health_check():
 		return JSONResponse(
 			status_code=HTTP_503_SERVICE_UNAVAILABLE, content=health_status
 		)
-	
-	#check 3: existence of environment variables
-	required_env_vars = {"DATABASE_URI", "TOKEN_KEY", "ALLOWED_HOSTS", "ALLOWED_ORIGINS"}
-	missing_env_vars = {var for var in required_env_vars if not os.getenv(var)}
-
-	if missing_env_vars:
-		health_status["status"] = "unhealthy"
-		health_status["checks"]["environment"] = f"missing: {', '.join(missing_env_vars)}"
-		return JSONResponse(
-			status_code=HTTP_503_SERVICE_UNAVAILABLE,
-			content=health_status
-		)
-	
-	health_status["checks"]["environment"] = "ok"
 	
 	return health_status

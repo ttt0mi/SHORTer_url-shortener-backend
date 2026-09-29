@@ -55,7 +55,7 @@ HEALTHCHECK --interval=5m --timeout=3s --start-period=40s --retries=3 \
 CMD sh -c "uvicorn src.main:app \
     --host 0.0.0.0 \
     --port ${PORT:-8000} \
-    --workers 4 \
+    --workers ${WEB_CONCURRENCY:-1} \
     --timeout-graceful-shutdown 30 \
     --log-level info"
 
