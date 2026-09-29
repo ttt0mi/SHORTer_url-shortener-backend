@@ -15,18 +15,6 @@ app = create_app(
 async def root():
 	return {"message": "how far OG"}
 
-@app.middleware("http")
-async def log_request(request: Request, call_next):
-	print(
-		f"METHOD={request.method} "
-		f"PATH={request.url.path} "
-		f"HOST={request.headers.get('host')}"
-	)
-
-	response = await call_next(request)
-	print(f"STATUS={response.status_code}")
-	return response
-
 if __name__ == "__main__":
 	import os
 	import uvicorn
